@@ -5,5 +5,5 @@ class AccountsConfig(AppConfig):
     name = 'accounts'
 
     def ready(self):
-        # This ensures that signals.py is imported and executed when the app is ready.
+        
         import accounts.signals

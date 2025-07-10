@@ -16,7 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Custom apps
+
     'accounts.apps.AccountsConfig',
 ]
 
@@ -38,7 +38,7 @@ ROOT_URLCONF = 'checkin_remainder.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # Make sure templates folder exists
+        'DIRS': [BASE_DIR / 'templates'], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -61,19 +61,14 @@ DATABASES = {
     }
 }
 
-# ✅ Removed Twilio settings
-
-# ✅ Gmail Email Configuration (REPLACE with secure values)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'alrassalrass33@gmail.com'           # ✅ Replace with your Gmail
-EMAIL_HOST_PASSWORD = 'tzkq zmnv fbvv ssic'     # ✅ Use Gmail App Password!
+EMAIL_HOST_USER = 'alrassalrass33@gmail.com'         
+EMAIL_HOST_PASSWORD = 'tzkq zmnv fbvv ssic'  
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-# Security warning:
-# 🔒 DO NOT hardcode Gmail password — use environment variables in production
 
 # Time & language
 LANGUAGE_CODE = 'en-us'
